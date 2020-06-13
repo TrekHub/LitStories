@@ -1,0 +1,276 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Kibra LitStories</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href=" {% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <!-- script
+    ================================================== -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header header">
+
+        <div class="header__logo">
+             <a class="logo" href="index.html">
+              <header style = "font-size:20px;font-style:bold;color:black;">Kibra LitStories</header>
+            </a>
+        </div> <!-- end header__logo -->
+
+        <a class="header__search-trigger" href="#0"></a>
+        <div class="header__search">
+
+            <form role="search" method="get" class="header__search-form" action="#">
+                <label>
+                    <span class="hide-content">Search for:</span>
+                    <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                </label>
+                <input type="submit" class="search-submit" value="Search">
+            </form>
+
+            <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+        </div>  <!-- end header__search -->
+
+        <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+        <nav class="header__nav-wrap">
+
+            <h2 class="header__nav-heading h6">Navigate to</h2>
+
+            <ul class="header__nav">
+                <li><a href="index.html" title="">Home</a></li> 
+                <li><a href="page-about.html" title="">About</a></li>
+                <li><a href="page-contact.html" title="">Contact</a></li>
+            </ul> <!-- end header__nav -->
+
+            <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+        </nav> <!-- end header__nav-wrap -->
+
+    </header> <!-- s-header -->
+
+
+    <!-- s-content
+    ================================================== -->
+    <section class="s-content s-content--top-padding s-content--narrow">
+
+        <article class="row entry format-standard">
+
+            <div class="entry__media col-full">
+                <div class="entry__post-thumb">
+                    <img src="{{ post.cover }}" 
+                         srcset="{{ post.cover }} 2000w, 
+                                 {{ post.cover }} 1000w, 
+                                 i{{ post.cover }} 500w" 
+                         sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                </div>
+            </div>
+
+            <div class="entry__header col-full">
+                <h1 class="entry__header-title display-1">
+                    {{ post.title }}
+                </h1>
+                <ul class="entry__header-meta">
+                    <li class="date"> {{ post.created_on }} </li>
+                    <li class="byline">
+                        By
+                        <a href="#0"> {{ post.author}} </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-full entry__main">
+
+                <p> {{ post.content}} </p>
+                
+            </div> 
+
+                <div class="entry__author">
+                    <img src="images/avatars/user-03.jpg" alt="">
+
+                    <div class="entry__author-about">
+                        <h5 class="entry__author-name">
+                            <span>Posted by</span>
+                            <a href="#0"> {{ post.author }} </a>
+                        </h5>
+
+                        <div class="entry__author-desc">
+                            <p>
+                            Alias aperiam at debitis deserunt dignissimos dolorem doloribus, fuga fugiat 
+                            impedit laudantium magni maxime nihil nisi quidem quisquam sed ullam voluptas 
+                            voluptatum. Lorem ipsum dolor sit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- s-entry__main -->
+
+        </article> <!-- end entry/article -->
+
+
+
+       
+
+           
+
+    </section> <!-- end s-content -->
+
+
+    <!-- s-extra
+    ================================================== -->
+    <section class="s-extra">
+
+        <div class="row">
+
+           
+        
+                    <div class="col-six md-six mob-full sitelinks">
+                        <h3>Site Links</h3>
+        
+                        <ul class="linklist">
+                            <li><a href="#0">Home</a></li>
+                            
+                            <li><a href="#0">About</a></li>
+                            <li><a href="#0">Contact</a></li>
+                           
+                        </ul>
+                    </div> <!-- end sitelinks -->
+                </div>
+            </div>
+        </div> <!-- end row -->
+
+    </section> <!-- end s-extra -->
+
+
+    <!-- s-footer
+    ================================================== -->
+    <footer class="s-footer">
+
+        <div class="s-footer__main">
+            <div class="row">
+                
+                <div class="col-six tab-full s-footer__about">
+                        
+                    <h4>About Kibra LitStories</h4>
+
+                    <p>Fugiat quas eveniet voluptatem natus. Placeat error temporibus magnam sunt optio aliquam. Ut ut occaecati placeat at. 
+                    Fuga fugit ea autem. Dignissimos voluptate repellat occaecati minima dignissimos mollitia consequatur.
+                    Sit vel delectus amet officiis repudiandae est voluptatem. Tempora maxime provident nisi et fuga et enim exercitationem ipsam. Culpa error 
+                    temporibus magnam est voluptatem.</p>
+
+                </div> <!-- end s-footer__about -->
+
+                <div class="col-six tab-full s-footer__subscribe">
+                        
+                    <h4>Our Newsletter</h4>
+
+                    <p>Sit vel delectus amet officiis repudiandae est voluptatem. Tempora maxime provident nisi et fuga et enim exercitationem ipsam. Culpa consequatur occaecati.</p>
+
+                    <div class="subscribe-form">
+                        <form id="mc-form" class="group" novalidate="true">
+
+                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                
+                            <input type="submit" name="subscribe" value="Send">
+                
+                            <label for="mc-email" class="subscribe-message"></label>
+                
+                        </form>
+                    </div>
+
+                </div> <!-- end s-footer__subscribe -->
+
+            </div>
+        </div> <!-- end s-footer__main -->
+
+        <div class="s-footer__bottom">
+            <div class="row">
+
+                <div class="col-six">
+                    <ul class="footer-social">
+                        <li>
+                            <a href="#0"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#0"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#0"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#0"><i class="fab fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href="#0"><i class="fab fa-pinterest"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-six">
+                    <div class="s-footer__copyright">
+                        <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div> <!-- end s-footer__bottom -->
+
+        <div class="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
